@@ -1,0 +1,12 @@
+{
+  "name": "hello-web3js",
+  "version": "1.0.0",
+  "description": "first look at web3js",
+  "main": "src/index.js",
+  "repository": "git@github.com:webgears0/hello-web3js.git",
+  "author": "MG",
+  "license": "MIT",
+  "dependencies": {
+    "web3": "^1.7.5"
+  }
+}
