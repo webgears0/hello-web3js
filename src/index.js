@@ -1,5 +1,12 @@
-var Web3 = require('web3');
+require('dotenv').config();
+const Web3 = require('web3');
 
-var web3 = new Web3('http://localhost:8545');
+const infuraKey = process.env.INFURA_KEY;
 
-console.log(web3);
+const provider = `https://mainnet.infura.io/v3/${infuraKey}`;
+const web3Provider = new Web3.providers.HttpProvider(provider);
+const web3 = new Web3(web3Provider);
+
+web3.eth.getBlockNumber().then((result) => {
+  console.log('Latest Ethereum Block is ', result);
+});
